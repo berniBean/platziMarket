@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Producto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_producto")
     private Integer idProducto;
 
@@ -27,10 +27,19 @@ public class Producto {
 
     private Boolean estado;
 
+
+
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)//no se puede inserar o actualizar solo recuperar categoria
     private Categoria categoria;//nombre de mappedBy
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
     public Integer getIdProducto() {
         return idProducto;

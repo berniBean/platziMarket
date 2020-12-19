@@ -1,20 +1,21 @@
 package com.platzimarket.domain;
 
 public class Product {
-    private int ProductId;
+
+    private int productId;
     private String name;
-    private int CategoryId;
-    private double Price;
+    private int categoryId;
+    private double price;
     private  int stock;
     private boolean active;
     private Category category;
 
     public int getProductId() {
-        return ProductId;
+        return productId;
     }
 
     public void setProductId(int productId) {
-        ProductId = productId;
+        this.productId = productId;
     }
 
     public String getName() {
@@ -26,19 +27,19 @@ public class Product {
     }
 
     public int getCategoryId() {
-        return CategoryId;
+        return categoryId;
     }
 
     public void setCategoryId(int categoryId) {
-        CategoryId = categoryId;
+        this.categoryId = categoryId;
     }
 
     public double getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(double price) {
-        Price = price;
+        this.price = price;
     }
 
     public int getStock() {
